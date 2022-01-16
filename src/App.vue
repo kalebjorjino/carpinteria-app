@@ -16,8 +16,8 @@
     <Section/>
     <Nosotros/>
     <Trabajo/>
-    
     <Galeria/>
+    <Footer/>
     </v-main>
   </v-app>
 </template>
@@ -29,6 +29,7 @@ import Section from './components/Section';
 import Nosotros from './components/Nosotros';
 import Trabajo from './components/Trabajo';
 import Galeria from './components/Galeria';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
@@ -40,6 +41,7 @@ export default {
     Trabajo,
     Nosotros,
     Galeria,
+    Footer
     
 },
 
