@@ -5,12 +5,12 @@
         <v-row justify="center">
     
     
-            <v-col lg="12" class="text-center">
+            <v-col v-for="item in items" :key="item.id" cols="12" md="4" class="text-center">
 
-                <v-subheader class="text-h4 justify-center">Trabajos Realizados</v-subheader>
+                <v-subheader class="text-h4 justify-center">Productos</v-subheader>
   
     
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Son muchos los productos que podemos fabricar, casi de todo en madera y melamina.</p>
   
             </v-col>
            <v-col lg="12">
@@ -28,7 +28,7 @@
             <slot v-if="activeTrabajos === 'webapp'">
     
  
-                <v-col lg="3" v-for="(web,webindex) in webApps" :key="webindex">
+                <v-col cols="12" md="3" v-for="(web,webindex) in webApps" :key="webindex">
     
      
                     <v-img :src="web.image"  aspect-ratio="1" class="grey lighten-2"></v-img>
@@ -38,7 +38,7 @@
             </slot>
     
             <slot v-if="activeTrabajos === 'mobileapp'">
-                <v-col lg="3" v-for="(mobile,mobileindex) in mobileApps" :key="mobileindex">
+                <v-col cols="12" md="3" v-for="(mobile,mobileindex) in mobileApps" :key="mobileindex">
     
    
                     <v-img :src="mobile.image"  aspect-ratio="1" class="grey lighten-2"></v-img>   
@@ -49,7 +49,7 @@
              <slot v-if="activeTrabajos === 'desktopapp'">
     
     
-                <v-col lg="3" v-for="(desktop,desktopindex) in desktopApps" :key="desktopindex">
+                <v-col cols="12" md="3" v-for="(desktop,desktopindex) in desktopApps" :key="desktopindex">
      
     
                     <v-img :src="desktop.image"  aspect-ratio="1" class="grey lighten-2"></v-img>   

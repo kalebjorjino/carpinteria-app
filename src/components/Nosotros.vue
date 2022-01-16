@@ -6,30 +6,26 @@
       </v-col>
       <v-col lg="6">
          <v-subheader class="text-h4">Nosostros</v-subheader>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ullam 
-         commodi iste optio ducimus eius placeat adipisci nobis omnis hic fugiat soluta 
-         ipsum libero facere, ad dolorem incidunt expedita excepturi?
+         <p>Nuestro personal, está capacitado además para realizar y resolver problemas en las siguientes áreas:
          </p>
          
             <v-list>
                 <v-list-item>
                   <v-icon color="success" class="mr-3" >mdi-check-all</v-icon>
-                  <v-list-item-subtitle>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  <v-list-item-subtitle>Diseñamos y fabricamos muebles y enseres en madera y melamina
                   </v-list-item-subtitle>
                 </v-list-item>
                 <v-list-item>
                   <v-icon color="success" class="mr-3">mdi-check-all</v-icon>
-                  <v-list-item-subtitle>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  <v-list-item-subtitle>Servicio de pintura de brocha gorda de paredes y fachadas.
                   </v-list-item-subtitle>
                 </v-list-item>
                 <v-list-item>
                   <v-icon color="success" class="mr-3">mdi-check-all</v-icon>
-                  <v-list-item-subtitle>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  <v-list-item-subtitle>Acabados en DD, polyester, duco, esmalte, laca etc 
                   </v-list-item-subtitle>
                 </v-list-item>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex at facilis. 
-                Quas voluptates reiciendis saepe animi numquam natus, nihil ratione? Ducimus, 
-                quo eum deserunt provident aperiam aliquam voluptatibus alias!
+                <p>Mantenimiento y reparaciones a nivel carpintería y acabado.
                 </p>
             </v-list>   
       </v-col>
@@ -47,5 +43,14 @@ export default {
 </script>
 
 <style scoped>
-
+.text-h4{
+   font-size: 60px;
+   font-weight: bold;
+   font-family: Arial, Helvetica, Verdana;
+   color: #444;
+}
+.mr-3{
+   font-family: Arial, Helvetica, Verdana;
+   color:#444444ba;
+}
 </style>

@@ -2,7 +2,7 @@
   <div class="heroBlock">
      <v-carousel
     cycle
-    height="700"
+    height="900"
     hide-delimiter-background
     show-arrows-on-hover
   >
@@ -27,15 +27,15 @@
         items: [
         {
           src: require("../assets/images/img-carousel1.jpg"),
-          title: "We are creative"
+       
         },
         {
           src: require("../assets/images/img-carousel2.jpg"),
-          title: "We are hard worker"
+          
         },
         {
           src: require("../assets/images/img-carousel3.jpg"),
-          title: "We are professional"
+        
         }
       ],
       }
