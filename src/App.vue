@@ -12,10 +12,11 @@
      <Header/>
     </v-app-bar>
     <v-main>
+    <HeroComponent/>
     <Section/>
     <Nosotros/>
     <Trabajo/>
-    <HeroComponent/>
+    
     <Galeria/>
     </v-main>
   </v-app>
@@ -23,10 +24,10 @@
 
 <script>
 import Header from './components/Header';
+import HeroComponent from './components/HeroComponent';
 import Section from './components/Section';
 import Nosotros from './components/Nosotros';
 import Trabajo from './components/Trabajo';
-import HeroComponent from './components/HeroComponent';
 import Galeria from './components/Galeria';
 
 export default {
@@ -34,8 +35,8 @@ export default {
 
   components: {
     Header,
-    Section,
     HeroComponent,
+    Section,
     Trabajo,
     Nosotros,
     Galeria,
