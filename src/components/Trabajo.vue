@@ -4,16 +4,11 @@
  
         <v-row justify="center">
     
-    
-            <v-col v-for="item in items" :key="item.id" cols="12" md="4" class="text-center">
-
-                <v-subheader class="text-h4 justify-center">Productos</v-subheader>
-  
-    
-                <p>Son muchos los productos que podemos fabricar, casi de todo en madera y melamina.</p>
-  
-            </v-col>
-           <v-col lg="12">
+        <v-col lg="12" class="text-center">
+           <v-subheader class="text-h4 justify-center">Productos</v-subheader>
+           <p>Son muchos los productos que podemos fabricar, casi de todo en madera y melamina.</p>
+        </v-col>
+           <v-col cols="12">
                 <div class="text-center">
          
                     <v-chip @click="activeTrabajos = 'webapp'" :color="activeTrabajos === 'webapp'? 'success': ''" class="mx-5">Mantenimiento</v-chip>

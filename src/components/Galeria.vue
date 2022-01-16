@@ -31,11 +31,11 @@ export default {
         },
         {
           id: 2,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/desmotivacion1-z1.jpg")
         },
         {
           id: 3,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/desmotivacion1-z2.jpg")
         },
         {
           id: 4,
@@ -43,11 +43,11 @@ export default {
         },
         {
           id: 5,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/desmotivacion1-z2.jpg")
         },
         {
           id: 6,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/desmotivacion1-z2.jpg")
         },
         {
           id: 7,
