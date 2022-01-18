@@ -2,7 +2,7 @@
 <v-container>
    <v-row>
       <v-col lg="6">
-         <v-subheader class="text-h4 justify-center">Nosostros</v-subheader>
+         <v-subheader class="text-h4">Nosostros</v-subheader>
          <p class="description">Nuestro personal, está capacitado además para realizar y resolver problemas en las siguientes áreas:
          </p>
          

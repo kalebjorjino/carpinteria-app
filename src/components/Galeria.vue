@@ -27,39 +27,39 @@ export default {
       items: [
         {
           id: 1,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/photo01.jpeg")
         },
         {
           id: 2,
-          src: require("../assets/images/desmotivacion1-z1.jpg")
+          src: require("../assets/images/photo03.jpeg")
         },
         {
           id: 3,
-          src: require("../assets/images/desmotivacion1-z2.jpg")
+          src: require("../assets/images/photo04.jpeg")
         },
         {
           id: 4,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/photo06.jpeg")
         },
         {
           id: 5,
-          src: require("../assets/images/desmotivacion1-z2.jpg")
+          src: require("../assets/images/photo19.jpg")
         },
         {
           id: 6,
-          src: require("../assets/images/desmotivacion1-z2.jpg")
+          src: require("../assets/images/photo20.jpg")
         },
         {
           id: 7,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/photo21.jpg")
         },
         {
           id: 8,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/photo07.jpeg")
         },
         {
           id: 9,
-          src: require("../assets/images/desmotivacion1-z.jpg")
+          src: require("../assets/images/photo01.jpeg")
         }
       ]
     };

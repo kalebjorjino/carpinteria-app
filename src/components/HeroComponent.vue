@@ -2,7 +2,7 @@
   <div class="heroBlock">
      <v-carousel
     cycle
-    height="500"
+    height="800"
     hide-delimiter-background
     show-arrows-on-hover
   >
@@ -26,15 +26,19 @@
       return {
         items: [
         {
-          src: require("../assets/images/img-carousel1.jpg"),
+          src: require("../assets/images/photo08.jpeg"),
        
         },
         {
-          src: require("../assets/images/img-carousel2.jpg"),
+          src: require("../assets/images/photo14.jpeg"),
           
         },
         {
-          src: require("../assets/images/img-carousel3.jpg"),
+          src: require("../assets/images/photo11.jpeg"),
+        
+        },
+         {
+          src: require("../assets/images/photo07.jpeg"),
         
         }
       ],

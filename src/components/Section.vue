@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 h2.intro-text{
-   font-size: 50px;
+   font-size: 40px;
    font-weight: bold;
    font-family: Arial, Helvetica, Verdana;
    color: #444;
@@ -38,7 +38,7 @@ h2.intro-text{
 p.description{
    font-size: 19px;
    font-family: Arial, Helvetica, Verdana;
-   margin: 32px 0px;
+   margin: 35px 0px;
    color:#444444ba;
 }
 

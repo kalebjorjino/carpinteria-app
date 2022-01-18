@@ -5,15 +5,15 @@
         <v-row justify="center">
     
         <v-col lg="12" class="text-center">
-           <v-subheader class="text-h4 justify-center">Productos</v-subheader>
+           <v-subheader class="text-h4 justify-center">Trabajos Realizados</v-subheader>
            <p>Son muchos los productos que podemos fabricar, casi de todo en madera y melamina.</p>
         </v-col>
            <v-col cols="12">
                 <div class="text-center">
          
-                    <v-chip @click="activeTrabajos = 'webapp'" :color="activeTrabajos === 'webapp'? 'success': ''" class="mx-5">Mantenimiento</v-chip>
+                    <v-chip @click="activeTrabajos = 'webapp'" :color="activeTrabajos === 'webapp'? 'success': ''" class="mx-5">Melamine</v-chip>
   
-                    <v-chip @click="activeTrabajos = 'mobileapp'" :color="activeTrabajos === 'mobile'? 'success': ''" class="mx-5">Armado</v-chip>
+                    <v-chip @click="activeTrabajos = 'mobileapp'" :color="activeTrabajos === 'mobile'? 'success': ''" class="mx-5">Madera</v-chip>
                     <v-chip @click="activeTrabajos = 'desktopapp'" :color="activeTrabajos === 'desktopapp'? 'success': ''" class="mx-5">Reparacion</v-chip>
      
                 </div>
@@ -25,13 +25,19 @@
            <v-card>
              <v-img 
                   
-                       :src="web.image"
-                       class="white--text align-end"
-                       gradient="to bottom, rgba(0,0,0.1), rgba(0,0,0,.5)"
+                       :src="web.src"
+                       class="white--text align-end"                     
                        height="200px"
             >
                 <v-card-title>{{web.title}}</v-card-title>
-            </v-img>   
+            </v-img> 
+             <v-card-subtitle class="pb-0">{{ web.subtitle }}</v-card-subtitle>
+            <v-card-text class="text--primary">
+              <div>{{ web.description }}</div>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn color="primary" text>Ver</v-btn>
+            </v-card-actions>     
            </v-card>       
         </v-col>
         </slot>
@@ -40,28 +46,40 @@
            <v-card>
              <v-img 
                   
-                       :src="mobile.image"
+                       :src="mobile.src"
                        class="white--text align-end"
-                       gradient="to bottom, rgba(0,0,0.1), rgba(0,0,0,.5)"
                        height="200px"
             >
                 <v-card-title>{{mobile.title}}</v-card-title>
-            </v-img>   
+            </v-img>
+            <v-card-subtitle class="pb-0">{{ mobile.subtitle }}</v-card-subtitle>
+            <v-card-text class="text--primary">
+              <div>{{ mobile.description }}</div>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn color="primary" text>Ver</v-btn>
+            </v-card-actions>  
            </v-card>       
         </v-col>
         </slot>
-         <slot v-if="activeTrabajos === 'mobileapp'">
-        <v-col lg="4" v-for="(mobile,mobileindex) in mobileApps" :key="mobileindex">
+         <slot v-if="activeTrabajos === 'desktopapp'">
+        <v-col lg="4" v-for="(desktop,desktopindex) in desktopApps" :key="desktopindex">
            <v-card>
              <v-img 
                   
-                       :src="mobile.image"
+                       :src="desktop.src"
                        class="white--text align-end"
-                       gradient="to bottom, rgba(0,0,0.1), rgba(0,0,0,.5)"
                        height="200px"
             >
-                <v-card-title>{{mobile.title}}</v-card-title>
-            </v-img>   
+                <v-card-title>{{desktop.title}}</v-card-title>
+            </v-img> 
+            <v-card-subtitle class="pb-0">{{ desktop.subtitle }}</v-card-subtitle>
+            <v-card-text class="text--primary">
+              <div>{{ desktop.description }}</div>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn color="primary" text>Ver</v-btn>
+            </v-card-actions>    
            </v-card>       
         </v-col>
         </slot>
@@ -79,23 +97,66 @@ export default {
         return {
             activeTrabajos: 'webapp',
             webApps: [
-                { title: 'Web App 1', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
-                { title: 'Web App 2', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
-                { title: 'Web App 3', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
-                { title: 'Web App 4', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
-               
-               
-            ],
+                { title: 'Botica', 
+                  subtitle: "Mueble Areo en melamine",
+                  description: "Trabajamos con los mejores materiales del medio, que unido a nuestra experiencia, asegura la calidad de nuestros productos",
+                  src: require("../assets/images/photo15.jpeg")                               
+                },
+
+                { title: 'Cocina', 
+                  subtitle: "Mueble de cocina",
+                  description: "Nuestros trabajos están garantizados, trabajamos con materiales y productos de alta calidad, para su máxima duración.",
+                  src: require("../assets/images/photo16.jpeg") 
+                },
+
+                { title: 'Cocina', 
+                  subtitle: "Mueble de cocina",
+                  description: "Contamos con técnicos y profesionales altamente capacitados, capaces de resolver situaciones, inclusive de otros oficios.",
+                  src: require("../assets/images/photo17.jpeg") 
+                }
+    
+                  ],
+
             mobileApps: [
-                { title: 'Web App 1', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
-                { title: 'Web App 2', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
-                { title: 'Web App 3', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
-                { title: 'Web App 4', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
+                 { title: 'Mueble 1', 
+                  subtitle: "Mueble en melamine",
+                  description: "Realizamos diseños y fabricaciones de reposteros de melamina o madera, en colores solicitados por nuestros clientes.",
+                  src: require("../assets/images/photo12.jpeg")                               
+                },
+
+                { title: 'Mueble 2', 
+                  subtitle: "Mueble en melamine",
+                  description: "Diseños e instalaciones según medidas solictadas.",
+                  src: require("../assets/images/photo13.jpeg") 
+                },
+
+                { title: 'Mueble 3', 
+                  subtitle: "Mueble en melamine",
+                  description: "Fabricamos escritorios con amplia gama de modelos y colores.",
+                  src: require("../assets/images/photo18.jpeg") 
+                }
+    
                
             ],
              desktopApps: [
-                { title: 'Web App 1', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
-                { title: 'Web App 2', image: 'https://scontent.flim18-2.fna.fbcdn.net/v/t31.18172-8/19467888_194965491033960_8336985962332592219_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeHB4ikZ15KxK0-quaq6DDBmiHmQflz08KmIeZB-XPTwqZNb598XBxpTW65jseMlNXMOl_7XB5Uc71tQLi1AYB0l&_nc_ohc=gDwpxREn6scAX9BpSiz&_nc_ht=scontent.flim18-2.fna&oh=00_AT8kiZCIhfFh2Gt5twrofkqKj1NtY2oeTf9GabHuVFEQXg&oe=61FDA847' },
+                { title: 'Mueble 4', 
+                  subtitle: "Mueble en melamine",
+                  description: "Realizamos diseños y fabricaciones de reposteros de melamina o madera, en colores solicitados por nuestros clientes.",
+                  src: require("../assets/images/photo01.jpeg")                               
+                },
+
+                { title: 'Mueble 5', 
+                  subtitle: "Mueble en melamine",
+                  description: "Realizamos diseños y fabricaciones de reposteros de melamina o madera, en colores solicitados por nuestros clientes.",
+                  src: require("../assets/images/photo02.jpeg") 
+                },
+
+                { title: 'Mueble 6', 
+                  subtitle: "Mueble en melamine",
+                  description: "Realizamos diseños y fabricaciones de reposteros de melamina o madera, en colores solicitados por nuestros clientes.",
+                  src: require("../assets/images/photo03.jpeg") 
+                }
+    
                
             ]
 
