@@ -20,41 +20,51 @@
   
             </v-col>
      
-            <slot v-if="activeTrabajos === 'webapp'">
-    
- 
-                <v-col cols="12" md="3" v-for="(web,webindex) in webApps" :key="webindex">
-    
-     
-                    <v-img :src="web.image"  aspect-ratio="1" class="grey lighten-2"></v-img>
-     
-                </v-col>
-    
-            </slot>
-    
-            <slot v-if="activeTrabajos === 'mobileapp'">
-                <v-col cols="12" md="3" v-for="(mobile,mobileindex) in mobileApps" :key="mobileindex">
-    
-   
-                    <v-img :src="mobile.image"  aspect-ratio="1" class="grey lighten-2"></v-img>   
-    
-                </v-col>
-     
-            </slot>
-             <slot v-if="activeTrabajos === 'desktopapp'">
-    
-    
-                <v-col cols="12" md="3" v-for="(desktop,desktopindex) in desktopApps" :key="desktopindex">
-     
-    
-                    <v-img :src="desktop.image"  aspect-ratio="1" class="grey lighten-2"></v-img>   
- 
-      
-                </v-col>
-    
-            </slot>
-    
-   
+             <slot v-if="activeTrabajos === 'webapp'">
+        <v-col lg="4" v-for="(web,webindex) in webApps" :key="webindex">
+           <v-card>
+             <v-img 
+                  
+                       :src="web.image"
+                       class="white--text align-end"
+                       gradient="to bottom, rgba(0,0,0.1), rgba(0,0,0,.5)"
+                       height="200px"
+            >
+                <v-card-title>{{web.title}}</v-card-title>
+            </v-img>   
+           </v-card>       
+        </v-col>
+        </slot>
+         <slot v-if="activeTrabajos === 'mobileapp'">
+        <v-col lg="4" v-for="(mobile,mobileindex) in mobileApps" :key="mobileindex">
+           <v-card>
+             <v-img 
+                  
+                       :src="mobile.image"
+                       class="white--text align-end"
+                       gradient="to bottom, rgba(0,0,0.1), rgba(0,0,0,.5)"
+                       height="200px"
+            >
+                <v-card-title>{{mobile.title}}</v-card-title>
+            </v-img>   
+           </v-card>       
+        </v-col>
+        </slot>
+         <slot v-if="activeTrabajos === 'mobileapp'">
+        <v-col lg="4" v-for="(mobile,mobileindex) in mobileApps" :key="mobileindex">
+           <v-card>
+             <v-img 
+                  
+                       :src="mobile.image"
+                       class="white--text align-end"
+                       gradient="to bottom, rgba(0,0,0.1), rgba(0,0,0,.5)"
+                       height="200px"
+            >
+                <v-card-title>{{mobile.title}}</v-card-title>
+            </v-img>   
+           </v-card>       
+        </v-col>
+        </slot>
     
         </v-row>
     

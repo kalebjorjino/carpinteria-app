@@ -1,7 +1,7 @@
 <template>
   <div class="block galleryBlock">
     <v-container>
-      <h2 class="text-center">Gallery</h2>
+      <h2 class="text-center">Galeria</h2>
       <v-row>
         <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="12" sm="4">
           <v-card flat tile class="d-flex">
