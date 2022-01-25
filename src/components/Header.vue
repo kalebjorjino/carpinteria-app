@@ -2,15 +2,15 @@
     <v-container>
         <v-toolbar flat>
     
-            <v-toolbar-title>Mozombite</v-toolbar-title>
+            <v-toolbar-title><router-link to="/">Mozombite</router-link></v-toolbar-title>
     
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-xs-only">
                 <v-btn text><router-link to="/">Inicio</router-link></v-btn>
     
-                <v-btn text><router-link to="/nosotros">Nosotros</router-link></v-btn>
+                <v-btn text><router-link to="/work">Trabajos</router-link></v-btn>
     
-                <v-btn text><router-link to="/contacto">Galeria</router-link></v-btn>
+                <v-btn text><router-link to="/photo">Galeria</router-link></v-btn>
             </v-toolbar-items>
              <div class="hidden-sm-and-up">
         <v-menu offset-y>
@@ -19,13 +19,13 @@
           </template>
           <v-list class="responsiveMenu">
             <v-list-item>
-              <v-list-item-title><router-link to="/">Home</router-link></v-list-item-title>
+              <v-list-item-title><router-link to="/">Inicio</router-link></v-list-item-title>
             </v-list-item>
             <v-list-item>
-              <v-list-item-title><router-link to="/about">About</router-link></v-list-item-title>
+              <v-list-item-title><router-link to="/work">Trabajos</router-link></v-list-item-title>
             </v-list-item>
             <v-list-item>
-              <v-list-item-title><router-link to="/contact">Contact</router-link></v-list-item-title>
+              <v-list-item-title><router-link to="/photo">Galeria</router-link></v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>

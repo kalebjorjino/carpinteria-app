@@ -11,24 +11,18 @@
     >
      <Header/>
     </v-app-bar>
-    <v-main>
-    <Section/>
-    <Nosotros/>
-    <Trabajo/>
-    <HeroComponent/>
-    <Galeria/>
-    <Footer/>
-    </v-main>
+    
+    <router-view></router-view>
+
+    <v-footer>
+       <Footer/>
+    </v-footer>
+        
   </v-app>
 </template>
 
 <script>
 import Header from './components/Header';
-import Section from './components/Section';
-import Nosotros from './components/Nosotros';
-import Trabajo from './components/Trabajo';
-import HeroComponent from './components/HeroComponent';
-import Galeria from './components/Galeria';
 import Footer from './components/Footer';
 
 export default {
@@ -36,13 +30,7 @@ export default {
 
   components: {
     Header,
-    Section,
-    Nosotros,
-    Trabajo,
-    HeroComponent,
-    Galeria,
-    Footer
-    
+    Footer    
 },
 
   data: () => ({
