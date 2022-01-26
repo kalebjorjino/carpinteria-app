@@ -9,6 +9,7 @@
       elevate-on-scroll
       
     >
+    <PageLoader/>
      <Header/>
     </v-app-bar>
     
@@ -24,13 +25,15 @@
 <script>
 import Header from './components/Header';
 import Footer from './components/Footer';
+import PageLoader from './components/PageLoader.vue';
 
 export default {
   name: 'App',
 
   components: {
     Header,
-    Footer    
+    Footer,
+    PageLoader
 },
 
   data: () => ({
