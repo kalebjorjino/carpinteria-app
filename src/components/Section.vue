@@ -4,7 +4,7 @@
           <v-col lg="6">
           <h2 class="intro-text">Servicios Generales</h2>
           <p class="description">Trabajamos tus proyectos con profesionalismo, esmero y dedicación.</p>
-          <v-btn color="success" class="white--text mr-10" rounded>Consultar</v-btn>
+          <v-btn color="success" class="white--text mr-10" rounded><router-link to="/contacto">Consultar</router-link></v-btn>
           <v-btn color="indigo" class="white--text" rounded>
              <v-icon>mdi-play-circle</v-icon>Ver Video
           </v-btn>
