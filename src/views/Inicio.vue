@@ -45,13 +45,13 @@ export default {
   position:fixed;
   width:60px;
   height:60px;
-  bottom:40px;
+  bottom:30px;
   right:40px;
-  background-color:#25d366;
+  background-color:#1976d2;
   color:#FFF;
   border-radius:50px;
   text-align:center;
-  font-size:30px;
+  font-size:35px;
   z-index:100;
 }
 

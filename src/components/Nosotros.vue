@@ -1,50 +1,60 @@
 <template>
-<v-container>
-   <v-row>
-      <v-col lg="6">
-         <v-subheader class="text-h4">Nosostros</v-subheader>
-         <p class="description">Nuestro personal, está capacitado además para realizar y resolver problemas en las siguientes áreas:
-         </p>
+   <v-container>
+      <v-row>
          
+            <v-col lg="12" class="text-center">
+               <v-subheader class="text-h4 justify-center">Nosostros</v-subheader>
+               <p class="description">Nuestro personal, está capacitado además para realizar y resolver problemas en las
+                  siguientes áreas:
+               </p>
+            </v-col>
+
             <v-list>
-                <v-list-item>
-                  <v-icon color="success" class="mr-3" >mdi-check-all</v-icon>
-                  <v-list-item-subtitle >Diseñamos y fabricamos muebles. 
-                  </v-list-item-subtitle>
-                </v-list-item>
-                <v-list-item>
+               <v-list-item>
                   <v-icon color="success" class="mr-3">mdi-check-all</v-icon>
-                  <v-list-item-subtitle >Servicio de pintura de brocha gorda. 
-                  </v-list-item-subtitle>
-                </v-list-item>
-                <v-list-item>
+                  <p class="description">Diseñamos y fabricamos muebles.
+                  </p>
+               </v-list-item>
+               <v-list-item>
                   <v-icon color="success" class="mr-3">mdi-check-all</v-icon>
-                  <v-list-item-subtitle >Acabados en base a tu estilo.
-                  </v-list-item-subtitle>
-                </v-list-item>
-                <p class="description">Mantenimiento y reparaciones a nivel carpintería y acabado.
-                </p>
-            </v-list>   
-      </v-col>
-   </v-row>
-</v-container>
+                  <p class="description">Servicio de pintura de brocha gorda.
+                  </p>
+               </v-list-item>
+               <v-list-item>
+                  <v-icon color="success" class="mr-3">mdi-check-all</v-icon>
+                  <p class="description">Acabados en base a tu estilo.
+                  </p>
+               </v-list-item>
+               <v-list-item>
+                  <v-icon color="success" class="mr-3">mdi-check-all</v-icon>
+                  <p class="description">Mantenimiento y reparaciones a nivel carpintería y acabado.</p>
+               </v-list-item>
+            </v-list>
+         
+      </v-row>
+   </v-container>
 </template>
 
 <script>
 
 export default {
-    name:"Nosotros"
-    
+   name: "Nosotros"
+
 }
 
 </script>
 
 <style scoped>
-p.description{
+p.description {
    font-size: 19px;
    font-family: Arial, Helvetica, Verdana;
-   margin: 32px 0px;
-   color:#444444ba;
+   margin: 15px 0px;
+   color: #444444ba;
 }
 
+@media (max-width: 599px) {
+   v-subheader {
+      align-items: center;
+   }
+}
 </style>

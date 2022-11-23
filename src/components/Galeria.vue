@@ -1,7 +1,9 @@
 <template>
   <div class="block galleryBlock">
     <v-container>
-      <h2 class="text-center">Galeria</h2>
+      <v-col lg="12" class="text-center">
+        <v-subheader class="text-h4 justify-center">Galeria</v-subheader>
+     </v-col>
       <v-row>
         <v-col v-for="item in items" :key="item.id" class="d-flex child-flex" cols="12" sm="4">
           <v-card flat tile class="d-flex">
@@ -66,3 +68,13 @@ export default {
   }
 };
 </script>
+
+<style>
+h2.text-center{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, Verdana;
+  color: #444;
+
+}
+</style>

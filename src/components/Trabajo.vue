@@ -6,14 +6,14 @@
     
         <v-col lg="12" class="text-center">
            <v-subheader class="text-h4 justify-center">Trabajos Realizados</v-subheader>
-           <p>Son muchos los productos que fabricamos, casi de todo en madera y melamina.</p>
+           <p class="description">Son muchos los productos que fabricamos, casi de todo en madera y melamina.</p>
         </v-col>
            <v-col cols="12">
                 <div class="text-center">
          
-                    <v-chip @click="activeTrabajos = 'webapp'" :color="activeTrabajos === 'webapp'? 'success': ''" class="mx-5">Melamine</v-chip>
+                    <v-chip @click="activeTrabajos = 'webapp'" :color="activeTrabajos === 'webapp'? '#1976d2': ''" class="mx-5">Melamine</v-chip>
   
-                    <v-chip @click="activeTrabajos = 'mobileapp'" :color="activeTrabajos === 'mobile'? 'success': ''" class="mx-5">Madera</v-chip>
+                    <v-chip @click="activeTrabajos = 'mobileapp'" :color="activeTrabajos === 'mobile'? '#1976d2': ''" class="mx-5">Madera</v-chip>
                     
      
                 </div>
@@ -27,16 +27,17 @@
                   
                        :src="web.src"
                        class="white--text align-end"                     
-                       height="200px"
+                       max-height="560"
+                       max-width="460"
             >
                 <v-card-title>{{web.title}}</v-card-title>
             </v-img> 
-             <v-card-subtitle class="pb-0">{{ web.subtitle }}</v-card-subtitle>
+             <v-card-subtitle class="pb-0 text--primary">{{ web.subtitle }}</v-card-subtitle>
             <v-card-text class="text--primary">
-              <div>{{ web.description }}</div>
+              <div class="description">{{ web.description }}</div>
             </v-card-text>
             <v-card-actions>
-              <v-btn color="primary" text>Ver</v-btn>
+              <v-btn color="#1976d2" text>Ver</v-btn>
             </v-card-actions>     
            </v-card>       
         </v-col>
@@ -48,16 +49,18 @@
                   
                        :src="mobile.src"
                        class="white--text align-end"
-                       height="200px"
+                       max-height="560"
+                       max-width="460"
+                       
             >
                 <v-card-title>{{mobile.title}}</v-card-title>
             </v-img>
-            <v-card-subtitle class="pb-0">{{ mobile.subtitle }}</v-card-subtitle>
+            <v-card-subtitle class="pb-0" color="#444444ba">{{ mobile.subtitle }}</v-card-subtitle>
             <v-card-text class="text--primary">
-              <div>{{ mobile.description }}</div>
+              <div class="description">{{ mobile.description }}</div>
             </v-card-text>
             <v-card-actions>
-              <v-btn color="primary" text >Ver</v-btn>
+              <v-btn color="#1976d2" text >Ver</v-btn>
             </v-card-actions>  
            </v-card>       
         </v-col>
@@ -92,7 +95,7 @@ export default {
                 { title: 'Cocina', 
                   subtitle: "Mueble de cocina",
                   description: "Contamos con técnicos y profesionales altamente capacitados, capaces de resolver situaciones, inclusive de otros oficios.",
-                  src: require("../assets/images/photo17.jpeg") 
+                  src: require("../assets/images/photo17.png") 
                 }
     
                   ],
@@ -126,5 +129,16 @@ export default {
 </script>
 
 <style scoped>
-
+div.description {
+  font-size: 15px;
+  font-family: Arial, Helvetica, Verdana;
+  margin: 15px 0px;
+  color: #444444ba;
+}
+p.description {
+  font-size: 19px;
+  font-family: Arial, Helvetica, Verdana;
+  margin: 15px 0px;
+  color: #444444ba;
+}
 </style>

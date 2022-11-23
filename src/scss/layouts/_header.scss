@@ -2,11 +2,14 @@ header {
   .v-toolbar__title {
     font-weight: 600;
     text-transform: uppercase;
+    font-family: Arial, Helvetica, Verdana;
   }
 
   .v-toolbar__content {
     @media only screen and (max-width: 599px) {
+      font-family: Arial, Helvetica, Verdana;
       padding: 0;
+      left: 30px;
     }
   }
 }
@@ -24,5 +27,6 @@ header {
         padding: 0 0 0 10px;
       }
     }
+
   }
 }

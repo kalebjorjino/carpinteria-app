@@ -1,7 +1,7 @@
 <template>
   <v-content>
     <div class="staticHero">
-      <v-img src="../assets/images/img-carousel1.jpg">
+      <v-img src="../assets/images/img-carousel1.png">
       <v-row align="end" class="lightbox white--text pa-2 fill-height">
         <v-col>
           <v-container>

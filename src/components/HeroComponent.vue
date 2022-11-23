@@ -2,7 +2,7 @@
   <div class="heroBlock">
      <v-carousel
     cycle
-    height="800"
+    height="400"
     hide-delimiter-background
     show-arrows-on-hover
   >
